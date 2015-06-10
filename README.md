@@ -1,5 +1,7 @@
 # jwk-allowed-algorithms
 
+[![Build Status](https://travis-ci.org/Brightspace/node-jwk-allowed-algorithms.svg?branch=master)](https://travis-ci.org/Brightspace/node-jwk-allowed-algorithms) [![Coverage Status](https://coveralls.io/repos/Brightspace/node-jwk-allowed-algorithms/badge.svg)](https://coveralls.io/r/Brightspace/node-jwk-allowed-algorithms)
+
 A tiny library to provide a list of [jwa algorithms][algs] allowed to be used
 with a particular [json web key][jwk].
 
