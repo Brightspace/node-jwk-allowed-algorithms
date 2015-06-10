@@ -1,0 +1,25 @@
+{
+  "name": "jwk-allowed-algorithms",
+  "version": "1.0.0",
+  "description": "Get an array of algorithms allowed to be used with a JWK.",
+  "main": "src/jwk-allowed-algorithms.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Brightspace/node-jwk-allowed-algorithms.git"
+  },
+  "keywords": [
+    "jwt",
+    "jwk",
+    "jwa",
+    "jsonwebtoken"
+  ],
+  "author": "D2L Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Brightspace/node-jwk-allowed-algorithms/issues"
+  },
+  "homepage": "https://github.com/Brightspace/node-jwk-allowed-algorithms#readme"
+}
