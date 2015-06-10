@@ -1,6 +1,15 @@
 sudo: false
 language: node_js
 node_js:
-  - 'iojs'
-  - '0.12'
-after_success: 'npm run report-cov'
+- iojs
+- '0.12'
+after_success: npm run report-cov
+deploy:
+  provider: npm
+  email: d2ltravisdeploy@d2l.com
+  api_key:
+    secure: OwpwHGq6Dh7OC6Q2yUMtgHeO5/yzjCIqzU9eqNRE9AfgQIeeusqI8GuYZXlLcSqmMcCGsJ1Ly9rinHrvC4SACzDtS2tkAiwE4RsIBHPOL8E5gbhmAmTgtbmJruSLkgA24y/CC7W29cjs3Ubuy2usgTx8N6jUYj+RYkKux+E59ELREPYnLY13o766rlbMiiObQDhlGB8YeDru1gxIXcG+I/xy9FPfz5iDydL8V8KqQHykwDPb2l+cTMPKqya+8Tm3RJweoC6/vg0gUGPinOXaHF6KNZSHLFUlalAh5LEN1oGJXacBbZEiXKsaBsToxb1/WyUABlnnP5nqsVynsDGOJ17b7uaJX/8EaFfp7KqW3Dyx296O+F13XpDjx0x7ovZGn7vMjbv3qc6yFdAq8QFHPDgkKzX9JI8HHvsUXLUCJCj8/h4KXdv85ST23il3VYVYlJ/zzvCzDDqS8H9BP+mH6lfarEAKQ4fJLg14PuTsOgfExSwgbZ35wcaEaFiOCBe3HS1vRmAXS1luav6HdN743kMbuCoaW+ypADLSaU8GtQHPWdWwX+A6GC1FBbXHa0SIdbp3Bof3gATzvQ5XvQOtSmmI5daFjzTHQgPQ/5qO2wsBLT5f9Z2Mu9bh6ysXJhR2n89paIk2L85bsC8XiLPP+xFCyH89vYJ1YM5yhein778=
+  on:
+    all_branches: true
+    tags: true
+    repo: Brightspace/node-jwk-allowed-algorithms
