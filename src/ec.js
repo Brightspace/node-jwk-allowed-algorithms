@@ -6,7 +6,7 @@ var curveAlgorithms = {
 	'P-521': ['ES512']
 };
 
-module.exports = function getEcDsaBaseAlgorithms (jwk) {
+module.exports = function getEcDsaBaseAlgorithms(jwk) {
 	var curve = jwk.crv;
 	if ('string' !== typeof jwk.crv) {
 		throw new TypeError('Expected "jwk.crv" to be a String');

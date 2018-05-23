@@ -3,7 +3,7 @@
 var ec = require('./ec'),
 	rsa = require('./rsa');
 
-function getBaseAlgorithms (jwk) {
+function getBaseAlgorithms(jwk) {
 	var kty = jwk.kty;
 	if ('string' !== typeof kty) {
 		throw new TypeError('expected "jwk.kty" to be a String');
@@ -22,7 +22,7 @@ function getBaseAlgorithms (jwk) {
 	}
 }
 
-function jwkAllowedAlgorithms (jwk) {
+function jwkAllowedAlgorithms(jwk) {
 	if (null === jwk || 'object' !== typeof jwk) {
 		throw new TypeError('Expected "jwk" to be an Object');
 	}
