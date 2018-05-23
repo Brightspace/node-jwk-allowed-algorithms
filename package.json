@@ -9,6 +9,7 @@
     "src"
   ],
   "scripts": {
+    "pretest": "eslint .",
     "test": "istanbul cover --root src _mocha -- spec",
     "report-cov": "cat ./coverage/lcov.info | coveralls"
   },
@@ -31,6 +32,8 @@
   "devDependencies": {
     "chai": "^3.0.0",
     "coveralls": "^2.11.2",
+    "eslint": "^2.13.1",
+    "eslint-config-brightspace": "^0.4.0",
     "istanbul": "^0.3.15",
     "mocha": "^2.2.5"
   }
