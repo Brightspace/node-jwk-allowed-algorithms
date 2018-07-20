@@ -10,8 +10,9 @@
   ],
   "scripts": {
     "pretest": "eslint .",
-    "test": "istanbul cover --root src _mocha -- spec",
-    "report-cov": "cat ./coverage/lcov.info | coveralls"
+    "test": "nyc --all mocha spec",
+    "posttest": "nyc report -r lcovonly",
+    "report-cov": "coveralls < ./coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,7 @@
     "coveralls": "^2.11.2",
     "eslint": "^2.13.1",
     "eslint-config-brightspace": "^0.4.0",
-    "istanbul": "^0.3.15",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "nyc": "^11.8.0"
   }
 }
