@@ -1,17 +1,15 @@
 'use strict';
 
-var expect = require('chai').expect,
-	mocha = require('mocha');
+const { describe, it } = require('node:test');
 
-var describe = mocha.describe,
-	it = mocha.it;
+const expect = require('chai').expect;
 
-var allowedAlgorithms = require('../');
+const allowedAlgorithms = require('../');
 
 describe('ecdsa', function() {
 	describe('P-256', function() {
 		it('should only include "ES256"', function() {
-			var algs = allowedAlgorithms({ kty: 'EC', crv: 'P-256' });
+			const algs = allowedAlgorithms({ kty: 'EC', crv: 'P-256' });
 
 			expect(algs).to.deep.equal(['ES256']);
 		});
@@ -44,7 +42,7 @@ describe('ecdsa', function() {
 
 	describe('P-384', function() {
 		it('should only include "ES384"', function() {
-			var algs = allowedAlgorithms({ kty: 'EC', crv: 'P-384' });
+			const algs = allowedAlgorithms({ kty: 'EC', crv: 'P-384' });
 
 			expect(algs).to.deep.equal(['ES384']);
 		});
@@ -77,7 +75,7 @@ describe('ecdsa', function() {
 
 	describe('P-521', function() {
 		it('should only include "ES512"', function() {
-			var algs = allowedAlgorithms({ kty: 'EC', crv: 'P-521' });
+			const algs = allowedAlgorithms({ kty: 'EC', crv: 'P-521' });
 
 			expect(algs).to.deep.equal(['ES512']);
 		});
