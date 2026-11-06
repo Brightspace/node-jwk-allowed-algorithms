@@ -1,10 +1,8 @@
 'use strict';
 
-var expect = require('chai').expect,
-	mocha = require('mocha');
+const { describe, it } = require('node:test');
 
-var describe = mocha.describe,
-	it = mocha.it;
+const expect = require('chai').expect;
 
 var allowedAlgorithms = require('..');
 
